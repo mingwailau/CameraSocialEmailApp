@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--First-->
@@ -41,11 +42,39 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7B-jC-toX">
+                                <rect key="frame" x="515" y="35" width="54" height="30"/>
+                                <state key="normal" title="Existing">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Text Here" translatesAutoresizingMaskIntoConstraints="NO" id="1kv-LI-Og0">
+                                <rect key="frame" x="180" y="120" width="240" height="360"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="360" id="R4P-ui-qDe"/>
+                                    <constraint firstAttribute="width" constant="240" id="WMp-PV-NSm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnL-l9-FAt">
+                                <rect key="frame" x="31" y="35" width="54" height="30"/>
+                                <state key="normal" title="Camera">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="c7B-jC-toX" secondAttribute="trailing" constant="15" id="KLc-WE-VUL"/>
+                            <constraint firstItem="c7B-jC-toX" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="15" id="LzW-ir-J5c"/>
+                            <constraint firstAttribute="centerY" secondItem="1kv-LI-Og0" secondAttribute="centerY" id="S11-mz-LjV"/>
                             <constraint firstAttribute="centerX" secondItem="XKw-Wp-Rg5" secondAttribute="centerX" id="Xmo-EQ-MKV"/>
                             <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="XKw-Wp-Rg5" secondAttribute="bottom" constant="25" id="bZ1-47-8kx"/>
+                            <constraint firstAttribute="centerX" secondItem="1kv-LI-Og0" secondAttribute="centerX" id="bth-kz-fOl"/>
+                            <constraint firstItem="BnL-l9-FAt" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="15" id="g2G-Cx-hNh"/>
+                            <constraint firstItem="BnL-l9-FAt" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="15" id="xPv-Hz-Kg9"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
