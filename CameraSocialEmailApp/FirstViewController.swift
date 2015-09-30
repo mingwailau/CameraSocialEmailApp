@@ -21,5 +21,10 @@ class FirstViewController: UIViewController {
     }
 
 
+    func fun() {
+        println("This is just for fun testing")
+    }
+    
+    
 }
 

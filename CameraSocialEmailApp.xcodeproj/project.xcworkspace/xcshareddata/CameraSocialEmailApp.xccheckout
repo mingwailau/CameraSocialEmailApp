@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>AE01D51B-6361-4DEF-BF23-296CE76F9A82</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CameraSocialEmailApp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>3424BFB4DAA07BD05D8E3FDA325D24391B68F64F</key>
+		<string>https://github.com/mingwailau/CameraSocialEmailApp.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CameraSocialEmailApp.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>3424BFB4DAA07BD05D8E3FDA325D24391B68F64F</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/mingwailau/CameraSocialEmailApp.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>3424BFB4DAA07BD05D8E3FDA325D24391B68F64F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>3424BFB4DAA07BD05D8E3FDA325D24391B68F64F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CameraSocialEmailApp</string>
+		</dict>
+	</array>
+</dict>
+</plist>
