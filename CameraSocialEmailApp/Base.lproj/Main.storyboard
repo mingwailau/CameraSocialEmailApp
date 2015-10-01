@@ -42,8 +42,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgJ-bj-ZWO">
-                                <rect key="frame" x="486" y="310" width="54" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgJ-bj-ZWO">
+                                <rect key="frame" x="478" y="310" width="62" height="30"/>
                                 <state key="normal" title="Existing">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -51,7 +51,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="mgJ-bj-ZWO" secondAttribute="trailing" constant="44" id="3gp-Dx-ZzN"/>
                             <constraint firstItem="YiU-tT-Yzr" firstAttribute="top" secondItem="vWS-T6-H47" secondAttribute="bottom" constant="211" id="5H4-cJ-vh2"/>
                             <constraint firstItem="YiU-tT-Yzr" firstAttribute="top" secondItem="mgJ-bj-ZWO" secondAttribute="bottom" constant="211" id="GaJ-6H-vwc"/>
                             <constraint firstItem="mgJ-bj-ZWO" firstAttribute="leading" secondItem="nkH-qU-81a" secondAttribute="trailing" constant="62" id="IZm-fh-L2A"/>
@@ -117,6 +116,9 @@
                                 <state key="normal" title="Send Email">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendMail:" destination="RLV-rO-UFv" eventType="touchUpInside" id="z3f-tP-BwS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -148,8 +150,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="RLV-rO-UFv" kind="relationship" relationship="viewControllers" id="ZEq-vT-Thj"/>
                         <segue destination="d7F-kp-fdX" kind="relationship" relationship="viewControllers" id="TgE-8l-VYW"/>
+                        <segue destination="RLV-rO-UFv" kind="relationship" relationship="viewControllers" id="Mcz-wa-DcN"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hgu-DV-R2U" userLabel="First Responder" sceneMemberID="firstResponder"/>

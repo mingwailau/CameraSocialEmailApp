@@ -1,4 +1,5 @@
 //
+//
 //  FirstViewController.swift
 //  CameraSocialEmailApp
 //
@@ -10,17 +11,17 @@ import Foundation
 import UIKit
 import MessageUI
 
-class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
+class FirstViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-
-
-
-    @IBAction func sendMail(sender: UIButton) {
     
+    
+    
+    @IBAction func sendMail(sender: UIButton) {
+        
         let mailComposeViewController = configuredMailComposeViewController()
         if MFMailComposeViewController.canSendMail() {
             self.presentViewController(mailComposeViewController, animated: true, completion: nil)
@@ -50,7 +51,7 @@ class ViewController: UIViewController, MFMailComposeViewControllerDelegate {
         controller.dismissViewControllerAnimated(true, completion: nil)
     }
 }
-    
-    
+
+
 
 
