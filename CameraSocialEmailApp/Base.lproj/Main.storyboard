@@ -23,6 +23,9 @@
                                 <state key="normal" title="Post on FB">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="ShareToFacebook:" destination="d7F-kp-fdX" eventType="touchUpInside" id="7XL-bB-Fyn"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write Post Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I2j-qE-ecZ">
                                 <rect key="frame" x="176" y="57" width="250" height="150"/>
@@ -33,20 +36,30 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nkH-qU-81a">
-                                <rect key="frame" x="176" y="261" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nkH-qU-81a">
+                                <rect key="frame" x="180" y="236" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="HQt-DW-4ZM"/>
+                                    <constraint firstAttribute="width" constant="240" id="JX7-pY-VO8"/>
+                                </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWS-T6-H47">
-                                <rect key="frame" x="66" y="310" width="54" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWS-T6-H47">
+                                <rect key="frame" x="66" y="311" width="54" height="30"/>
                                 <state key="normal" title="Camera">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="ChooseFromCamera:" destination="d7F-kp-fdX" eventType="touchUpInside" id="pmx-nB-RI4"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgJ-bj-ZWO">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgJ-bj-ZWO">
                                 <rect key="frame" x="478" y="310" width="62" height="30"/>
                                 <state key="normal" title="Existing">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="choseImageFromPhotoLibrary" destination="d7F-kp-fdX" eventType="touchUpInside" id="dAR-Sn-ROo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -55,6 +68,8 @@
                             <constraint firstItem="YiU-tT-Yzr" firstAttribute="top" secondItem="mgJ-bj-ZWO" secondAttribute="bottom" constant="211" id="GaJ-6H-vwc"/>
                             <constraint firstItem="mgJ-bj-ZWO" firstAttribute="leading" secondItem="nkH-qU-81a" secondAttribute="trailing" constant="62" id="IZm-fh-L2A"/>
                             <constraint firstItem="nkH-qU-81a" firstAttribute="leading" secondItem="vWS-T6-H47" secondAttribute="trailing" constant="50" id="JBL-Cy-MLj"/>
+                            <constraint firstAttribute="centerX" secondItem="nkH-qU-81a" secondAttribute="centerX" id="Kzc-x9-6j9"/>
+                            <constraint firstAttribute="centerY" secondItem="nkH-qU-81a" secondAttribute="centerY" id="MXb-kT-Iot"/>
                             <constraint firstAttribute="centerX" secondItem="NBx-sn-F5F" secondAttribute="centerX" id="Y1P-eZ-iqo"/>
                             <constraint firstItem="vWS-T6-H47" firstAttribute="leading" secondItem="dP8-vm-eMp" secondAttribute="leadingMargin" constant="50" id="csU-rr-1j8"/>
                             <constraint firstAttribute="centerY" secondItem="vWS-T6-H47" secondAttribute="centerY" id="hsI-wm-9bm"/>
@@ -68,6 +83,10 @@
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="MTz-0g-Yzu"/>
+                    <connections>
+                        <outlet property="MainImageView" destination="nkH-qU-81a" id="wwv-y0-NQp"/>
+                        <outlet property="MainTextField" destination="I2j-qE-ecZ" id="WPc-U2-ktO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gdp-nB-9Ii" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -85,7 +104,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Recipient Email Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UyI-BY-YoX">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="kjdfskjsdf@fff.fff" borderStyle="roundedRect" placeholder="Recipient Email Address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UyI-BY-YoX">
                                 <rect key="frame" x="175" y="67" width="250" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="Z9T-Rh-psg"/>
@@ -93,7 +112,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Subject" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dO2-Rb-PJX">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="dfdffd" borderStyle="roundedRect" placeholder="Subject" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dO2-Rb-PJX">
                                 <rect key="frame" x="176" y="130" width="250" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="kJu-uB-SXR"/>
@@ -101,7 +120,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write Email Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ttr-lN-689">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="dffddf" borderStyle="roundedRect" placeholder="Write Email Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ttr-lN-689">
                                 <rect key="frame" x="176" y="204" width="250" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="2Wk-Sb-C4S"/>
@@ -134,6 +153,11 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="1O9-BW-fvC"/>
+                    <connections>
+                        <outlet property="EmailAddressField" destination="UyI-BY-YoX" id="Jao-LI-Zrw"/>
+                        <outlet property="MainTextField" destination="ttr-lN-689" id="fWf-f6-iAN"/>
+                        <outlet property="SubjectField" destination="dO2-Rb-PJX" id="NOJ-SJ-GJR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iOv-PU-N7G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

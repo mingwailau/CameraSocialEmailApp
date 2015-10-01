@@ -13,6 +13,16 @@ import MessageUI
 
 class FirstViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
+    
+    @IBOutlet weak var EmailAddressField: UITextField!
+    
+    
+    @IBOutlet weak var SubjectField: UITextField!
+    
+    
+    @IBOutlet weak var MainTextField: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -34,9 +44,9 @@ class FirstViewController: UIViewController, MFMailComposeViewControllerDelegate
         let mailComposerVC = MFMailComposeViewController()
         mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
         
-        mailComposerVC.setToRecipients(["mwlau@msn.com"])
-        mailComposerVC.setSubject("Sending you an in-app e-mail...")
-        mailComposerVC.setMessageBody("Sending e-mail in-app is not so bad!", isHTML: false)
+        mailComposerVC.setToRecipients([EmailAddressField.text])
+        mailComposerVC.setSubject(SubjectField.text)
+        mailComposerVC.setMessageBody(MainTextField.text, isHTML: false)
         
         return mailComposerVC
     }
